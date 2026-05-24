@@ -178,3 +178,73 @@
 .hd-bar-food   { background: var(--accent-2); }
 .hd-bar-travel { background: #4a90d9; }
 .hd-bar-bills  { background: #7c6fc4; }
+
+/* ------------------------------------------------------------------
+   Video modal
+   ------------------------------------------------------------------ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 860px;
+    background: #000;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.modal-overlay.is-open .modal-box {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+
+.modal-close:hover { background: rgba(255, 255, 255, 0.3); }
+
+.modal-video {
+    aspect-ratio: 16 / 9;
+}
+
+.modal-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}

@@ -24,7 +24,7 @@
         </p>
         <div class="hero-actions">
             <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
-            <a href="#" class="btn-primary">See how it works</a>
+            <a href="#" class="btn-primary" id="watchBtn">See how it works</a>
         </div>
 
         <div class="hero-dashboard">
@@ -102,4 +102,23 @@
     </div>
 </section>
 
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <div class="modal-video">
+            <iframe id="videoFrame"
+                src=""
+                data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
 {% endblock %}
