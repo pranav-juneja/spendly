@@ -1,0 +1,180 @@
+/* ================================================================== */
+/* Landing page — hero overrides and dashboard mock                   */
+/* ================================================================== */
+
+/* ------------------------------------------------------------------
+   Hero layout: override the 2-column grid from style.css
+   ------------------------------------------------------------------ */
+
+.hero {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 4rem 2rem 5rem;
+    background: var(--paper-card);
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+    margin-bottom: 2rem;
+}
+
+.hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-title {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* Actions */
+.hero-actions {
+    justify-content: center;
+    margin-bottom: 3.5rem;
+}
+
+.hero-actions .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------
+   Dashboard mock card
+   ------------------------------------------------------------------ */
+
+.hero-dashboard {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    text-align: left;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* macOS traffic-light dots */
+.hd-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.hd-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.hd-dot-red    { background: #ff5f57; }
+.hd-dot-yellow { background: #ffbd2e; }
+.hd-dot-green  { background: #28c840; }
+
+/* Stat tiles */
+.hd-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.hd-stat {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.hd-stat-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+}
+
+.hd-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    color: var(--ink);
+    line-height: 1.15;
+}
+
+.hd-stat-note {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.hd-note-danger  { color: var(--danger); }
+.hd-note-success { color: var(--accent); }
+
+/* Category bar rows */
+.hd-bars {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hd-bar-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hd-bar-label {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    text-align: right;
+}
+
+.hd-bar-track {
+    height: 10px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hd-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.hd-bar-food   { background: var(--accent-2); }
+.hd-bar-travel { background: #4a90d9; }
+.hd-bar-bills  { background: #7c6fc4; }
